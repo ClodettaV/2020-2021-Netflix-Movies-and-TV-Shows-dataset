@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from sqlalchemy import create_engine
 
 # database setup 
-engine = create_engine("sqlite:///titanic.sqlite")
+engine = create_engine("sqlite:///Netflix.sqlite")
 
 # flask app setup
 app = Flask(__name__)
@@ -21,7 +21,7 @@ def names():
             "age": list(row)[3],
             "sex": list(row)[4],
             "survived": list(row)[5],
-        } for row in engine.execute("select * from passenger").all()]
+        } for row in engine.execute("select * from country").all()]
 
     return {"passengers":results}
 

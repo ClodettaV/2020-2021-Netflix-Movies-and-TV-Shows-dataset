@@ -1,5 +1,5 @@
 function buildMetadata(sample) {
-  d3.csv("netflix_movies_tvshows.csv").then((data) => {
+  d3.json("netflix_movies_tvShows.csv").then((data) => {
       var metadata= data.metadata;
       var resultsarray= metadata.filter(sampleobject => 
         sampleobject.id == sample);
