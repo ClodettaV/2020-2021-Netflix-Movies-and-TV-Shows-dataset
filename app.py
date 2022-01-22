@@ -9,6 +9,8 @@ from os import listdir
 from os.path import isfile, join
 
 import json
+from geojson import Feature, FeatureCollection, Point
+
 import pickle
 import markdown as md
 
@@ -19,6 +21,7 @@ from sqlalchemy import create_engine, func
 
 from flask_sqlalchemy import SQLAlchemy
 
+from convert2geojson import Convert2GeoJson
 
 
 # database setup 
@@ -56,6 +59,30 @@ Base = automap_base()
 #     "cost": "Product cost",
 #     "profit": "Gross profit"
 # }
+
+def df_to_geojson(df, properties, lat='latitude', lon='longitude'):
+    # create a new python dict to contain our geojson data, using geojson format
+        geojson = {'type':'FeatureCollection', 'features':[]}
+
+    # loop through each row in the dataframe and convert each row to geojson format
+        for _, row in df.iterrows():
+        # create a feature template to fill in
+            feature = {'type':'Feature',
+                   'properties':{},
+                   'geometry':{'type':'Point',
+                               'coordinates':[]}}
+
+        # fill in the coordinates
+            feature['geometry']['coordinates'] = [row[lon],row[lat]]
+
+        # for each column, get the value and add it as a new feature property
+            for prop in properties:
+                feature['properties'][prop] = row[prop]
+        
+        # add this feature (aka, converted dataframe row) to the list of features inside our dict
+            geojson['features'].append(feature)
+    
+        return geojson
 
 
 @app.route("/")
@@ -96,7 +123,7 @@ def typegroup(year,type):
     df = pd.DataFrame(sqldata)
     grouped= df[(df["release_year"].isin(map(int,year.split(','))))&(df["type"].isin(type.split(',')))].groupby(["type"]).count().sort_values("title",ascending=False)["title"].reset_index()[0:10]
     jsondata = grouped.to_json(orient="records")
-
+    
     return jsondata
 
 @app.route("/year/<year>/<type>")
@@ -109,6 +136,64 @@ def yeargroup(year,type):
     jsondata = grouped.to_json(orient="records")
 
     return jsondata
+
+# @app.route("/country/<year>/<type>")
+# def countrygroup(year,type):
+#     engine = create_engine("sqlite:///Netflix_moviesandTvshows.sqlite")
+#     conn= engine.connect()
+#     sqldata = pd.read_sql("select * from netflix ",conn)
+#     df = pd.DataFrame(sqldata)
+#     df2 = pd.read_csv("countries.csv")
+#     df2=df2[['COUNTRY','longitude','latitude']]
+#     df2=df2.rename(columns={"COUNTRY": "country"})
+#     df=df.merge(df2, on='country', how='left')
+#     grouped= df[(df["release_year"].isin(map(int,year.split(','))))&(df["type"].isin(type.split(',')))].groupby(["country"]).count().sort_values("title",ascending=False)["title"].reset_index()
+#     jsondata = grouped.to_json(orient="records")
+    
+#     return jsondata
+
+@app.route("/country/<year>/<type>")
+def countrygroup(year,type):
+    engine = create_engine("sqlite:///Netflix_moviesandTvshows.sqlite")
+    conn= engine.connect()
+    sqldata = pd.read_sql("select * from netflix ",conn)
+    df = pd.DataFrame(sqldata)
+    df2 = pd.read_csv("countries.csv")
+    df2=df2[['COUNTRY','longitude','latitude']]
+    df2=df2.rename(columns={"COUNTRY": "country"})
+    # df2['longitude'] = df2['longitude'].astype(float)
+    # df2['latitude'] = df2['latitude'].astype(float)
+    
+    grouped= df[(df["release_year"].isin(map(int,year.split(','))))&(df["type"].isin(type.split(',')))].groupby(["country"]).count().sort_values("title",ascending=False)["title"].reset_index()
+    grouped=grouped.merge(df2, on='country', how='left')
+    grouped['longitude'] = grouped['longitude'].fillna(0)
+    grouped['latitude'] = grouped['latitude'].fillna(0)
+
+    data = Convert2GeoJson(grouped,grouped.columns,lat="latitude",lon="longitude").convert().geojson()
+    # data.convert()
+    # result=data.geojson()
+
+    # features = grouped.apply(
+    #     lambda row: Feature(geometry=Point((float(row['longitude']), float(row['latitude'])))),
+    #     axis=1).tolist()
+
+
+# all the other columns used as properties
+    # properties = df.drop(['latitude', 'longitude'], axis=1).to_dict('records')
+
+# whole geojson object
+    # feature_collection = FeatureCollection(features=features, properties=properties)
+    
+    
+    # cols = ['show_id','type','title','director','cast','date_added','release_year','rating','duration','listed_in','description']
+    # newgeojson = df_to_geojson(grouped, cols)
+
+    # jsondata = grouped.to_json(orient="records")
+    return     data
+
+
+    # return feature_collection  
+    # return newgeojson    
 
 # @app.route("/inventory/<release_year>")
 # def inventory(release_year):
@@ -145,24 +230,24 @@ def yeargroup(year,type):
 #     return jsonify(Netflix)
 
 
-@app.route("/api/release_year")
-def names():
-    results = [
-        {
-            "show_id": list(row)[0],
-            "type": list(row)[1],
-            "title": list(row)[2],
-            "director": list(row)[3],
-            "cast": list(row)[4],
-            "country": list(row)[5],
-            "release_year": list(row)[7],
-            "rating": list(row)[8],
-            "listed_in": list(row)[9],
-            "description": list(row)[10]
+# @app.route("/api/release_year")
+# def names():
+#     results = [
+#         {
+#             "show_id": list(row)[0],
+#             "type": list(row)[1],
+#             "title": list(row)[2],
+#             "director": list(row)[3],
+#             "cast": list(row)[4],
+#             "country": list(row)[5],
+#             "release_year": list(row)[7],
+#             "rating": list(row)[8],
+#             "listed_in": list(row)[9],
+#             "description": list(row)[10]
         
-        } for row in engine.execute("select * from netflix")]
+#         } for row in engine.execute("select * from netflix")]
 
-    return {"netflix":results}
+#     return {"netflix":results}
 
 
 

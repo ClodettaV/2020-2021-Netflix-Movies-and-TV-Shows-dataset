@@ -1,23 +1,50 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg ">
     <div class="container d-flex flex-column flex-md-row justify-content-between">
-        <a class="navbar-brand" href="/">Netflix Analysis</a>
+        <img src="https://variety.com/wp-content/uploads/2020/05/netflix-logo.png" height="30px">
+        <a class="navbar-brand" href="/">|</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="/forecast">Forecast</a>
+                <li class="nav-itemData">
+                    <a class="nav-linkData" href="/Data">Data</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/report">Report</a>
+                <a class="navbar-brand2" href="/">|</a>
+                <li class="nav-itemDoc">
+                    <a class="nav-linkDocumentation" href="/Documentation">Documentation</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/api/doc">API</a>
+                <a class="navbar-brand2" href="/">|</a>
+                <li class="nav-itemGithub">
+                    <a class="nav-linkGithubRepo"
+                        href="https://github.com/ClodettaV/Project-2---Visualize-Me-Captain-">Github
+                        Repo</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="/changelog">Changelog</a>
+                <li class="nav-item4">
+                    <a class="nav-link" href="https://github.com/ClodettaV/Project-2---Visualize-Me-Captain-">|</a>
+                </li>
+
+                <li class="nav-item2">
+                    <a class="nav-link" aria-current="page" href="/changelog"> Year</a>
+                </li>
+                <li class="nav-item3">
+                    <select id="yearSelector" class="form-select" aria-label="Default select example">
+                        <option selected value="{{ years|join(',') }}">All Years</option>
+                        {% for year in years %}
+                        <option value="{{ year }}">{{ year }}</option>
+                        {% endfor %}
+                    </select>
+                </li>
+                <li class="nav-item2">
+                    <a class="nav-link" aria-current="page" href="/changelog"> Type</a>
+                </li>
+                <li class="nav-item3">
+                    <select id="metricSelector" class="form-select" aria-label="Default select example">
+                        <option selected value="TV Show,Movie">All</option>
+                        <option value="TV Show">TV</option>
+                        <option value="Movie">Movies</option>
+                    </select>
                 </li>
             </ul>
         </div>
