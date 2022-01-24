@@ -1,7 +1,7 @@
-# --2020-2021 Netflix Movies and TV Shows dataset--
+# 2020-2021 Netflix Movies and TV Shows dataset
 ## Overview
 
-We have created a dashboard using Flask to analyze the correlation between the use of Netflix and its audience to better understand and personalize content based on key factors such as age and type of show. 
+We have created a dashboard using Flask in order to analyze the correlation between the use of Netflix and its audience. The goal is to better understand and personalize content based on key factors such as age and type of show. 
 
 Questions we want to answer:
 1.	What is the most targeted audience?
@@ -22,11 +22,12 @@ Plotly JS was used to render the data onto the page by querying the API endpoint
 
 This page was created by rendering markdown using Python Markdown.
 
-Report Pages
+### Report Pages
 
+### API page
 API docs were created using Flask RESTX.
 
-Running locally
+## Running locally
 
 1. Freeze pip / conda requirements
 python -m pip list --format=freeze > requirements.txt
@@ -44,7 +45,7 @@ flask run
   
   
   
-Deploying to Heroku
+## Deploying to Heroku
 Freeze pip / conda requirements
 
 python -m pip list --format=freeze > requirements.txt
