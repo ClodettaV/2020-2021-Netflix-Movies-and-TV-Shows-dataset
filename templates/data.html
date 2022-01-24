@@ -1,0 +1,1540 @@
+{% extends "base2.html" %}
+
+{% block body %}
+<div class="container">
+
+    <div class="row" style="padding-top:20px; "></div>
+    <table border="0" class="table table-striped table table-hover table-condensed"
+        style="overflow-x:auto; overflow-y:auto; max-height:470px; max-width: auto;">
+        <thead>
+            <tr style="text-align: center;">
+                <th></th>
+                <th>show_id</th>
+                <th>type</th>
+                <th>title</th>
+                <th>director</th>
+                <th>cast</th>
+                <th>country</th>
+                <th>date_added</th>
+                <th>release_year</th>
+                <th>rating</th>
+                <th>duration</th>
+                <th>listed_in</th>
+                <th>description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>0</th>
+                <td>s1</td>
+                <td>Movie</td>
+                <td>Dick Johnson Is Dead</td>
+                <td>Kirsten Johnson</td>
+                <td>NaN</td>
+                <td>United States</td>
+                <td>September 25, 2021</td>
+                <td>2020</td>
+                <td>PG-13</td>
+                <td>90 min</td>
+                <td>Documentaries</td>
+                <td>As her father nears the end of his life, filmmaker Kirsten Johnson stages his death in inventive and
+                    comical ways to help them both face the inevitable.</td>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>s2</td>
+                <td>TV Show</td>
+                <td>Blood &amp; Water</td>
+                <td>NaN</td>
+                <td>Ama Qamata, Khosi Ngema, Gail Mabalane, Thabang Molaba, Dillon Windvogel, Natasha Thahane, Arno
+                    Greeff, Xolile Tshabalala, Getmore Sithole, Cindy Mahlangu, Ryle De Morny, Greteli Fincham, Sello
+                    Maake Ka-Ncube, Odwa Gwanya, Mekaila Mathys, Sandi Schultz, Duane Williams, Shamilla Miller, Patrick
+                    Mofokeng</td>
+                <td>South Africa</td>
+                <td>September 24, 2021</td>
+                <td>2021</td>
+                <td>TV-MA</td>
+                <td>2 Seasons</td>
+                <td>International TV Shows, TV Dramas, TV Mysteries</td>
+                <td>After crossing paths at a party, a Cape Town teen sets out to prove whether a private-school
+                    swimming star is her sister who was abducted at birth.</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>s3</td>
+                <td>TV Show</td>
+                <td>Ganglands</td>
+                <td>Julien Leclercq</td>
+                <td>Sami Bouajila, Tracy Gotoas, Samuel Jouy, Nabiha Akkari, Sofia Lesaffre, Salim Kechiouche,
+                    Noureddine Farihi, Geert Van Rampelberg, Bakary Diombera</td>
+                <td>NaN</td>
+                <td>September 24, 2021</td>
+                <td>2021</td>
+                <td>TV-MA</td>
+                <td>1 Season</td>
+                <td>Crime TV Shows, International TV Shows, TV Action &amp; Adventure</td>
+                <td>To protect his family from a powerful drug lord, skilled thief Mehdi and his expert team of robbers
+                    are pulled into a violent and deadly turf war.</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>s4</td>
+                <td>TV Show</td>
+                <td>Jailbirds New Orleans</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>September 24, 2021</td>
+                <td>2021</td>
+                <td>TV-MA</td>
+                <td>1 Season</td>
+                <td>Docuseries, Reality TV</td>
+                <td>Feuds, flirtations and toilet talk go down among the incarcerated women at the Orleans Justice
+                    Center in New Orleans on this gritty reality series.</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>s5</td>
+                <td>TV Show</td>
+                <td>Kota Factory</td>
+                <td>NaN</td>
+                <td>Mayur More, Jitendra Kumar, Ranjan Raj, Alam Khan, Ahsaas Channa, Revathi Pillai, Urvi Singh, Arun
+                    Kumar</td>
+                <td>India</td>
+                <td>September 24, 2021</td>
+                <td>2021</td>
+                <td>TV-MA</td>
+                <td>2 Seasons</td>
+                <td>International TV Shows, Romantic TV Shows, TV Comedies</td>
+                <td>In a city of coaching centers known to train India’s finest collegiate minds, an earnest but
+                    unexceptional student and his friends navigate campus life.</td>
+            </tr>
+            <tr>
+                <th>5</th>
+                <td>s6</td>
+                <td>TV Show</td>
+                <td>Midnight Mass</td>
+                <td>Mike Flanagan</td>
+                <td>Kate Siegel, Zach Gilford, Hamish Linklater, Henry Thomas, Kristin Lehman, Samantha Sloyan, Igby
+                    Rigney, Rahul Kohli, Annarah Cymone, Annabeth Gish, Alex Essoe, Rahul Abburi, Matt Biedel, Michael
+                    Trucco, Crystal Balint, Louis Oliver</td>
+                <td>NaN</td>
+                <td>September 24, 2021</td>
+                <td>2021</td>
+                <td>TV-MA</td>
+                <td>1 Season</td>
+                <td>TV Dramas, TV Horror, TV Mysteries</td>
+                <td>The arrival of a charismatic young priest brings glorious miracles, ominous mysteries and renewed
+                    religious fervor to a dying town desperate to believe.</td>
+            </tr>
+            <tr>
+                <th>6</th>
+                <td>s7</td>
+                <td>Movie</td>
+                <td>My Little Pony: A New Generation</td>
+                <td>Robert Cullen, José Luis Ucha</td>
+                <td>Vanessa Hudgens, Kimiko Glenn, James Marsden, Sofia Carson, Liza Koshy, Ken Jeong, Elizabeth
+                    Perkins, Jane Krakowski, Michael McKean, Phil LaMarr</td>
+                <td>NaN</td>
+                <td>September 24, 2021</td>
+                <td>2021</td>
+                <td>PG</td>
+                <td>91 min</td>
+                <td>Children &amp; Family Movies</td>
+                <td>Equestria's divided. But a bright-eyed hero believes Earth Ponies, Pegasi and Unicorns should be
+                    pals — and, hoof to heart, she’s determined to prove it.</td>
+            </tr>
+            <tr>
+                <th>7</th>
+                <td>s8</td>
+                <td>Movie</td>
+                <td>Sankofa</td>
+                <td>Haile Gerima</td>
+                <td>Kofi Ghanaba, Oyafunmike Ogunlano, Alexandra Duah, Nick Medley, Mutabaruka, Afemo Omilami, Reggie
+                    Carter, Mzuri</td>
+                <td>United States, Ghana, Burkina Faso, United Kingdom, Germany, Ethiopia</td>
+                <td>September 24, 2021</td>
+                <td>1993</td>
+                <td>TV-MA</td>
+                <td>125 min</td>
+                <td>Dramas, Independent Movies, International Movies</td>
+                <td>On a photo shoot in Ghana, an American model slips back in time, becomes enslaved on a plantation
+                    and bears witness to the agony of her ancestral past.</td>
+            </tr>
+            <tr>
+                <th>8</th>
+                <td>s9</td>
+                <td>TV Show</td>
+                <td>The Great British Baking Show</td>
+                <td>Andy Devonshire</td>
+                <td>Mel Giedroyc, Sue Perkins, Mary Berry, Paul Hollywood</td>
+                <td>United Kingdom</td>
+                <td>September 24, 2021</td>
+                <td>2021</td>
+                <td>TV-14</td>
+                <td>9 Seasons</td>
+                <td>British TV Shows, Reality TV</td>
+                <td>A talented batch of amateur bakers face off in a 10-week competition, whipping up their best dishes
+                    in the hopes of being named the U.K.'s best.</td>
+            </tr>
+            <tr>
+                <th>9</th>
+                <td>s10</td>
+                <td>Movie</td>
+                <td>The Starling</td>
+                <td>Theodore Melfi</td>
+                <td>Melissa McCarthy, Chris O'Dowd, Kevin Kline, Timothy Olyphant, Daveed Diggs, Skyler Gisondo, Laura
+                    Harrier, Rosalind Chao, Kimberly Quinn, Loretta Devine, Ravi Kapoor</td>
+                <td>United States</td>
+                <td>September 24, 2021</td>
+                <td>2021</td>
+                <td>PG-13</td>
+                <td>104 min</td>
+                <td>Comedies, Dramas</td>
+                <td>A woman adjusting to life after a loss contends with a feisty bird that's taken over her garden —
+                    and a husband who's struggling to find a way forward.</td>
+            </tr>
+            <tr>
+                <th>10</th>
+                <td>s11</td>
+                <td>TV Show</td>
+                <td>Vendetta: Truth, Lies and The Mafia</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>September 24, 2021</td>
+                <td>2021</td>
+                <td>TV-MA</td>
+                <td>1 Season</td>
+                <td>Crime TV Shows, Docuseries, International TV Shows</td>
+                <td>Sicily boasts a bold "Anti-Mafia" coalition. But what happens when those trying to bring down
+                    organized crime are accused of being criminals themselves?</td>
+            </tr>
+            <tr>
+                <th>11</th>
+                <td>s12</td>
+                <td>TV Show</td>
+                <td>Bangkok Breaking</td>
+                <td>Kongkiat Komesiri</td>
+                <td>Sukollawat Kanarot, Sushar Manaying, Pavarit Mongkolpisit, Sahajak Boonthanakit, Suthipongse
+                    Thatphithakkul, Bhasaworn Bawronkirati, Daweerit Chullasapya, Waratthaya Wongchayaporn, Kittiphoom
+                    Wongpentak, Abhicha Thanachanun, Nophand Boonyai, Kittipong Khamsat, Arisara Wongchalee, Jaytiya
+                    Naiwattanakul, Pantipa Arunwattanachai, Panupan Jantanawong, Kungtap Saelim, Phumphat
+                    Chartsuriyakiat, Issara Veranitinunt, Keerati Sivakuae, Panjai Sirisuwan, Supranee Charoenpol, Suda
+                    Chuenban, Visaka Banhansupavat, Pitchatorn Santinatornkul</td>
+                <td>NaN</td>
+                <td>September 23, 2021</td>
+                <td>2021</td>
+                <td>TV-MA</td>
+                <td>1 Season</td>
+                <td>Crime TV Shows, International TV Shows, TV Action &amp; Adventure</td>
+                <td>Struggling to earn a living in Bangkok, a man joins an emergency rescue service and realizes he must
+                    unravel a citywide conspiracy.</td>
+            </tr>
+            <tr>
+                <th>12</th>
+                <td>s13</td>
+                <td>Movie</td>
+                <td>Je Suis Karl</td>
+                <td>Christian Schwochow</td>
+                <td>Luna Wedler, Jannis Niewöhner, Milan Peschel, Edin Hasanović, Anna Fialová, Marlon Boess, Victor
+                    Boccard, Fleur Geffrier, Aziz Dyab, Mélanie Fouché, Elizaveta Maximová</td>
+                <td>Germany, Czech Republic</td>
+                <td>September 23, 2021</td>
+                <td>2021</td>
+                <td>TV-MA</td>
+                <td>127 min</td>
+                <td>Dramas, International Movies</td>
+                <td>After most of her family is murdered in a terrorist bombing, a young woman is unknowingly lured into
+                    joining the very group that killed them.</td>
+            </tr>
+            <tr>
+                <th>8731</th>
+                <td>s8732</td>
+                <td>Movie</td>
+                <td>While We're Young</td>
+                <td>Noah Baumbach</td>
+                <td>Ben Stiller, Naomi Watts, Adam Driver, Amanda Seyfried, Charles Grodin, Adam Horovitz, Dree
+                    Hemingway, Brady Corbet, Maria Dizzia, Matthew Maher, Peter Yarrow, Dean Wareham</td>
+                <td>United States</td>
+                <td>October 23, 2017</td>
+                <td>2015</td>
+                <td>R</td>
+                <td>97 min</td>
+                <td>Comedies, Dramas, Independent Movies</td>
+                <td>A documentary filmmaker struggling with a creative block meets a vibrant young hipster couple who,
+                    initially, bring new energy into his life and work.</td>
+            </tr>
+            <tr>
+                <th>8732</th>
+                <td>s8733</td>
+                <td>Movie</td>
+                <td>White Chamber</td>
+                <td>Paul Raschid</td>
+                <td>Shauna MacDonald, Oded Fehr, Amrita Acharia, Sharon Maughan, Nicholas Farrell, Candis Nergaard,
+                    Marcus Griffiths, Adrianna Edwards, Sumit Chakravarti, Lisa Reynolds</td>
+                <td>United Kingdom</td>
+                <td>August 1, 2019</td>
+                <td>2018</td>
+                <td>TV-MA</td>
+                <td>89 min</td>
+                <td>Sci-Fi &amp; Fantasy, Thrillers</td>
+                <td>When a civil war ravages the UK, a scientist awakens in a futuristic cell and is tortured by her
+                    captor for information she claims she doesn't possess.</td>
+            </tr>
+            <tr>
+                <th>8733</th>
+                <td>s8734</td>
+                <td>Movie</td>
+                <td>White Island</td>
+                <td>Benjamin Turner</td>
+                <td>Lyndon Ogbourne, Billy Zane, Billy Boyd, Joel Dommett, Elliot Gleave, Gala Gordon, Darren Day, Owain
+                    Arthur, Craig Gazey, Ben Cura</td>
+                <td>United Kingdom</td>
+                <td>September 25, 2017</td>
+                <td>2016</td>
+                <td>TV-MA</td>
+                <td>91 min</td>
+                <td>Comedies, Independent Movies, Thrillers</td>
+                <td>Returning to Ibiza after several years walking the straight and narrow in London, Connor falls back
+                    in with a criminal crowd. It's like he never left.</td>
+            </tr>
+            <tr>
+                <th>8734</th>
+                <td>s8735</td>
+                <td>Movie</td>
+                <td>Who the F**k Is That Guy?</td>
+                <td>Drew Stone</td>
+                <td>Michael Alago</td>
+                <td>United States</td>
+                <td>September 1, 2017</td>
+                <td>2017</td>
+                <td>TV-MA</td>
+                <td>78 min</td>
+                <td>Documentaries, LGBTQ Movies, Music &amp; Musicals</td>
+                <td>Take a ride through the life of record exec Michael Alago, a gay Puerto Rican New Yorker who signed
+                    a slew of musical acts, including Metallica.</td>
+            </tr>
+            <tr>
+                <th>8735</th>
+                <td>s8736</td>
+                <td>Movie</td>
+                <td>Who's That Knocking at My Door?</td>
+                <td>Martin Scorsese</td>
+                <td>Zina Bethune, Harvey Keitel, Anne Collette, Lennard Kuras, Michael Scala, Harry Northup, Susan Wood,
+                    Marissa Mathes, Catherine Scorsese</td>
+                <td>United States</td>
+                <td>July 1, 2019</td>
+                <td>1967</td>
+                <td>R</td>
+                <td>90 min</td>
+                <td>Classic Movies, Dramas, Independent Movies</td>
+                <td>A woman's revelation that she was once raped sends her boyfriend, a reformed street thug, into an
+                    emotional and spiritual tailspin.</td>
+            </tr>
+            <tr>
+                <th>8736</th>
+                <td>s8737</td>
+                <td>TV Show</td>
+                <td>Who's the One</td>
+                <td>NaN</td>
+                <td>Tien Hsin, Weber Yang, Pink Yang, Johnny Lu, Amanda Chou, Xiu Qin</td>
+                <td>Taiwan</td>
+                <td>January 1, 2017</td>
+                <td>2011</td>
+                <td>TV-14</td>
+                <td>1 Season</td>
+                <td>International TV Shows, Romantic TV Shows, TV Comedies</td>
+                <td>A doctor performs plastic surgery on a fat man who's been jilted, and continues his transformation
+                    by turning him into a handsome, desirable man.</td>
+            </tr>
+            <tr>
+                <th>8737</th>
+                <td>s8738</td>
+                <td>Movie</td>
+                <td>Why Are We Getting So Fat?</td>
+                <td>Milla Harrison-Hansley, Alicky Sussman</td>
+                <td>Giles Yeo</td>
+                <td>United Kingdom</td>
+                <td>February 1, 2019</td>
+                <td>2016</td>
+                <td>TV-14</td>
+                <td>50 min</td>
+                <td>Documentaries</td>
+                <td>A Cambridge geneticist dispels misconceptions about living with obesity and explores why the
+                    epidemic continues to expand across the UK and America.</td>
+            </tr>
+            <tr>
+                <th>8738</th>
+                <td>s8739</td>
+                <td>Movie</td>
+                <td>Why Knot</td>
+                <td>Dhruv Dhawan</td>
+                <td>NaN</td>
+                <td>Canada, India, Thailand, United States, United Arab Emirates</td>
+                <td>October 15, 2017</td>
+                <td>2016</td>
+                <td>TV-MA</td>
+                <td>84 min</td>
+                <td>Documentaries</td>
+                <td>Pressured by his traditional family to marry, a filmmaker explores the idea of monogamy and the
+                    possibility of lifelong union without sexual fidelity.</td>
+            </tr>
+            <tr>
+                <th>8739</th>
+                <td>s8740</td>
+                <td>Movie</td>
+                <td>Why We Fight: The Battle of Russia</td>
+                <td>Frank Capra, Anatole Litvak</td>
+                <td>NaN</td>
+                <td>United States</td>
+                <td>March 31, 2017</td>
+                <td>1943</td>
+                <td>TV-PG</td>
+                <td>82 min</td>
+                <td>Documentaries</td>
+                <td>This installment of Frank Capra's acclaimed documentary series highlights the need for a
+                    Russo-American alliance to defeat the Nazis.</td>
+            </tr>
+            <tr>
+                <th>8740</th>
+                <td>s8741</td>
+                <td>TV Show</td>
+                <td>Wild Alaska</td>
+                <td>NaN</td>
+                <td>Dougray Scott</td>
+                <td>United Kingdom</td>
+                <td>March 31, 2017</td>
+                <td>2015</td>
+                <td>TV-PG</td>
+                <td>1 Season</td>
+                <td>British TV Shows, Docuseries, Science &amp; Nature TV</td>
+                <td>The natural bounty of Alaska sustains its diverse species through extreme weather conditions in
+                    three seasons, each with its rewards and challenges.</td>
+            </tr>
+            <tr>
+                <th>8741</th>
+                <td>s8742</td>
+                <td>TV Show</td>
+                <td>Wild Arabia</td>
+                <td>NaN</td>
+                <td>Alexander Siddig</td>
+                <td>United Kingdom</td>
+                <td>March 31, 2017</td>
+                <td>2013</td>
+                <td>TV-PG</td>
+                <td>1 Season</td>
+                <td>British TV Shows, Docuseries, Science &amp; Nature TV</td>
+                <td>The widely varied geology and dramatic landscapes in the continental crossroads of Arabia harbors a
+                    rich history and an abundance of wildlife.</td>
+            </tr>
+            <tr>
+                <th>8742</th>
+                <td>s8743</td>
+                <td>Movie</td>
+                <td>Wild Wild West</td>
+                <td>Barry Sonnenfeld</td>
+                <td>Will Smith, Kevin Kline, Kenneth Branagh, Salma Hayek, M. Emmet Walsh, Ted Levine, Frederique Van
+                    Der Wal, Musetta Vander, Sofia Eng, Bai Ling</td>
+                <td>United States</td>
+                <td>January 1, 2020</td>
+                <td>1999</td>
+                <td>PG-13</td>
+                <td>106 min</td>
+                <td>Action &amp; Adventure, Comedies, Sci-Fi &amp; Fantasy</td>
+                <td>Armed with an ingenious arsenal, two top-notch government agents are tasked with tracking down a
+                    diabolical scientist in this futuristic Western.</td>
+            </tr>
+            <tr>
+                <th>8743</th>
+                <td>s8744</td>
+                <td>Movie</td>
+                <td>Wildlife</td>
+                <td>Paul Dano</td>
+                <td>Carey Mulligan, Ed Oxenbould, Bill Camp, Jake Gyllenhaal, Mollie Milligan, Darryl Cox</td>
+                <td>United States</td>
+                <td>September 1, 2020</td>
+                <td>2018</td>
+                <td>PG-13</td>
+                <td>105 min</td>
+                <td>Dramas, Independent Movies</td>
+                <td>A teen’s life in 1960 Montana grows complicated when his father is fired, his mother returns to
+                    work, and the strain on the family begins to show.</td>
+            </tr>
+            <tr>
+                <th>8744</th>
+                <td>s8745</td>
+                <td>Movie</td>
+                <td>Williams</td>
+                <td>Morgan Matthews</td>
+                <td>NaN</td>
+                <td>United Kingdom</td>
+                <td>November 4, 2017</td>
+                <td>2017</td>
+                <td>TV-MA</td>
+                <td>105 min</td>
+                <td>Documentaries, International Movies, Sports Movies</td>
+                <td>This inspiring documentary charts the birth of Sir Frank Williams's renowned racing empire – and the
+                    near-fatal crash that nearly stalled its future.</td>
+            </tr>
+            <tr>
+                <th>8745</th>
+                <td>s8746</td>
+                <td>Movie</td>
+                <td>Willy Wonka &amp; the Chocolate Factory</td>
+                <td>Mel Stuart</td>
+                <td>Gene Wilder, Jack Albertson, Peter Ostrum, Roy Kinnear, Julie Dawn Cole, Leonard Stone, Denise
+                    Nickerson, Dodo Denney, Paris Themmen, Ursula Reit</td>
+                <td>United States, East Germany, West Germany</td>
+                <td>January 1, 2020</td>
+                <td>1971</td>
+                <td>G</td>
+                <td>100 min</td>
+                <td>Children &amp; Family Movies, Classic Movies, Comedies</td>
+                <td>Zany Willy Wonka causes a stir when he announces that golden tickets hidden inside his candy bars
+                    will admit holders into his secret confectionary.</td>
+            </tr>
+            <tr>
+                <th>8746</th>
+                <td>s8747</td>
+                <td>Movie</td>
+                <td>Winnie</td>
+                <td>Pascale Lamche</td>
+                <td>NaN</td>
+                <td>France, Netherlands, South Africa, Finland</td>
+                <td>February 26, 2018</td>
+                <td>2017</td>
+                <td>TV-14</td>
+                <td>85 min</td>
+                <td>Documentaries, International Movies</td>
+                <td>Winnie Mandela speaks about her extraordinary and controversial career, from her early life to her
+                    marriage to her ongoing efforts to end apartheid.</td>
+            </tr>
+            <tr>
+                <th>8747</th>
+                <td>s8748</td>
+                <td>TV Show</td>
+                <td>Winsanity</td>
+                <td>NaN</td>
+                <td>Donald Faison</td>
+                <td>United States</td>
+                <td>December 15, 2018</td>
+                <td>2016</td>
+                <td>TV-G</td>
+                <td>1 Season</td>
+                <td>Reality TV</td>
+                <td>Actor Donald Faison hosts this game show in which contestants must arrange numerical-based trivia
+                    tidbits from largest to smallest for various prizes.</td>
+            </tr>
+            <tr>
+                <th>8748</th>
+                <td>s8749</td>
+                <td>Movie</td>
+                <td>Winter of Our Dreams</td>
+                <td>John Duigan</td>
+                <td>Judy Davis, Bryan Brown, Cathy Downes, Baz Luhrmann, Peter Mochrie, Mervyn Drake, Margie McCrae</td>
+                <td>Australia</td>
+                <td>November 1, 2016</td>
+                <td>1981</td>
+                <td>NR</td>
+                <td>86 min</td>
+                <td>Classic Movies, Dramas</td>
+                <td>After the death of a long-ago lover, married philanderer Rob tracks down her friend, a drug-addicted
+                    prostitute desperate to escape her dead-end life.</td>
+            </tr>
+            <tr>
+                <th>8749</th>
+                <td>s8750</td>
+                <td>TV Show</td>
+                <td>Winter Sun</td>
+                <td>NaN</td>
+                <td>Şükrü Özyıldız, Aslı Enver, Şenay Gürler, Başak Parlak, Mahir Günşiray, Hakan Boyav, Hakan Gerçek,
+                    Berrak Kuş, Gamze Süner Atay, Mehmet Esen</td>
+                <td>Turkey</td>
+                <td>August 1, 2017</td>
+                <td>2014</td>
+                <td>TV-MA</td>
+                <td>1 Season</td>
+                <td>International TV Shows, TV Dramas, TV Thrillers</td>
+                <td>Years after ruthless businessmen kill his father and order the death of his twin brother, a modest
+                    fisherman adopts a new persona to exact revenge.</td>
+            </tr>
+            <tr>
+                <th>8750</th>
+                <td>s8751</td>
+                <td>Movie</td>
+                <td>Winter's Bone</td>
+                <td>Debra Granik</td>
+                <td>Jennifer Lawrence, John Hawkes, Kevin Breznahan, Dale Dickey, Garret Dillahunt, Sheryl Lee, Lauren
+                    Sweetser, Tate Taylor</td>
+                <td>United States</td>
+                <td>March 1, 2019</td>
+                <td>2010</td>
+                <td>R</td>
+                <td>100 min</td>
+                <td>Dramas, Independent Movies</td>
+                <td>In this unflinching noir drama, a resilient teen goes on the trail of her missing, drug-dealing
+                    father when his absence threatens the family's safety.</td>
+            </tr>
+            <tr>
+                <th>8751</th>
+                <td>s8752</td>
+                <td>Movie</td>
+                <td>Wish I Was Here</td>
+                <td>Zach Braff</td>
+                <td>Zach Braff, Kate Hudson, Donald Faison, Joey King, Josh Gad, Jim Parsons, Pierce Gagnon, Mandy
+                    Patinkin, Ashley Greene, Michael Weston</td>
+                <td>United States</td>
+                <td>August 16, 2018</td>
+                <td>2014</td>
+                <td>R</td>
+                <td>106 min</td>
+                <td>Comedies, Dramas, Independent Movies</td>
+                <td>With his acting career moribund, Aidan Bloom steers a new tack in life, taking over his children's
+                    education when private school becomes too costly.</td>
+            </tr>
+            <tr>
+                <th>8752</th>
+                <td>s8753</td>
+                <td>Movie</td>
+                <td>Wish Man</td>
+                <td>Theo Davies</td>
+                <td>Andrew Steel, Kirby Bliss Blanton, Tom Sizemore, Danny Trejo, Frank Whaley, Robert Pine, Fay
+                    Masterson, Steven Michael Quezada, Bruce Davison, Dale Dickey, Kenny Roberts, Colin Edwards, Casey
+                    Stoner, Freddie Spencer</td>
+                <td>United States</td>
+                <td>December 3, 2019</td>
+                <td>2019</td>
+                <td>TV-14</td>
+                <td>108 min</td>
+                <td>Children &amp; Family Movies, Dramas</td>
+                <td>After surviving a life-threatening accident, a troubled cop finds new purpose when he bonds with a
+                    terminally ill little boy. Based on a true story.</td>
+            </tr>
+            <tr>
+                <th>8753</th>
+                <td>s8754</td>
+                <td>Movie</td>
+                <td>Withdrawn</td>
+                <td>Adrian Murray</td>
+                <td>Aaron Keogh, Molly Reisman, Dean Tardioli, Greg Wasylyszn, Adrian Murray, Kelly Paoli, Earl
+                    Oliveros, Hallie Burt</td>
+                <td>Canada</td>
+                <td>May 1, 2018</td>
+                <td>2017</td>
+                <td>TV-MA</td>
+                <td>74 min</td>
+                <td>Dramas, Independent Movies</td>
+                <td>Unable to pay bills and unwilling to change his slacker lifestyle, twentysomething Aaron hatches a
+                    defrauding scheme when he finds a lost credit card.</td>
+            </tr>
+            <tr>
+                <th>8754</th>
+                <td>s8755</td>
+                <td>Movie</td>
+                <td>Wolves</td>
+                <td>Bart Freundlich</td>
+                <td>Michael Shannon, Carla Gugino, Taylor John Smith, Chris Bauer, John Douglas Thompson, Zazie Beetz,
+                    Wayne Duvall, Christopher Meyer, Richard Kohnke</td>
+                <td>United States</td>
+                <td>March 29, 2019</td>
+                <td>2016</td>
+                <td>R</td>
+                <td>109 min</td>
+                <td>Dramas, Independent Movies, Sports Movies</td>
+                <td>A promising high school basketball player has his eye on an Ivy League scholarship. But his father's
+                    secret addictions could ruin everything.</td>
+            </tr>
+            <tr>
+                <th>8755</th>
+                <td>s8756</td>
+                <td>TV Show</td>
+                <td>Women Behind Bars</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>United States</td>
+                <td>November 1, 2016</td>
+                <td>2010</td>
+                <td>TV-14</td>
+                <td>3 Seasons</td>
+                <td>Crime TV Shows, Docuseries</td>
+                <td>This reality series recounts true stories of women who have been convicted for murder, including an
+                    in-depth examination of each crime.</td>
+            </tr>
+            <tr>
+                <th>8756</th>
+                <td>s8757</td>
+                <td>Movie</td>
+                <td>Woodstock</td>
+                <td>Barak Goodman</td>
+                <td>NaN</td>
+                <td>United States</td>
+                <td>August 13, 2019</td>
+                <td>2019</td>
+                <td>TV-MA</td>
+                <td>97 min</td>
+                <td>Documentaries, Music &amp; Musicals</td>
+                <td>For the 50th anniversary of the legendary Woodstock festival, organizers and attendees reminisce
+                    about one of the defining moments of the 1960s.</td>
+            </tr>
+            <tr>
+                <th>8757</th>
+                <td>s8758</td>
+                <td>Movie</td>
+                <td>World Trade Center</td>
+                <td>Oliver Stone</td>
+                <td>Nicolas Cage, Michael Peña, Maggie Gyllenhaal, Maria Bello, Stephen Dorff, Jay Hernandez, Michael
+                    Shannon, Frank Whaley, Jon Bernthal, Morgan Flynn, Nick Damici, Viola Davis, William Mapother</td>
+                <td>United States</td>
+                <td>November 20, 2019</td>
+                <td>2006</td>
+                <td>PG-13</td>
+                <td>129 min</td>
+                <td>Action &amp; Adventure, Dramas</td>
+                <td>Working under treacherous conditions, an army of dedicated rescuers struggles to find anyone who
+                    survived the World Trade Center's tragic collapse.</td>
+            </tr>
+            <tr>
+                <th>8758</th>
+                <td>s8759</td>
+                <td>TV Show</td>
+                <td>World's Busiest Cities</td>
+                <td>NaN</td>
+                <td>Anita Rani, Ade Adepitan, Dan Snow</td>
+                <td>United Kingdom</td>
+                <td>February 1, 2019</td>
+                <td>2017</td>
+                <td>TV-PG</td>
+                <td>1 Season</td>
+                <td>British TV Shows, Docuseries</td>
+                <td>From Moscow to Mexico City, three BBC journalists delve into the inner workings of some of the most
+                    burgeoning metropolises on Earth.</td>
+            </tr>
+            <tr>
+                <th>8759</th>
+                <td>s8760</td>
+                <td>Movie</td>
+                <td>World's Weirdest Homes</td>
+                <td>Storm Theunissen</td>
+                <td>Charlie Luxton</td>
+                <td>NaN</td>
+                <td>February 1, 2019</td>
+                <td>2015</td>
+                <td>TV-PG</td>
+                <td>49 min</td>
+                <td>Movies</td>
+                <td>From a bubble-shaped palace to an island built on plastic bottles, tour the world’s most
+                    fantastically bizarre residences.</td>
+            </tr>
+            <tr>
+                <th>8760</th>
+                <td>s8761</td>
+                <td>Movie</td>
+                <td>Would You Rather</td>
+                <td>David Guy Levy</td>
+                <td>Brittany Snow, Jeffrey Combs, Jonny Coyne, Lawrence Gilliard Jr., Enver Gjokaj, Sasha Grey, John
+                    Heard, Charlie Hofheimer, Logan Miller, June Squibb, Eddie Steeples, Robin Lord Taylor, Robb Wells
+                </td>
+                <td>United States</td>
+                <td>June 5, 2019</td>
+                <td>2013</td>
+                <td>TV-MA</td>
+                <td>93 min</td>
+                <td>Horror Movies, Independent Movies, Thrillers</td>
+                <td>In need of cash to help her sick brother, a young woman agrees to take part in a lethal
+                    winner-takes-all parlor game hosted by a sadistic millionaire.</td>
+            </tr>
+            <tr>
+                <th>8761</th>
+                <td>s8762</td>
+                <td>Movie</td>
+                <td>Wrong No.</td>
+                <td>Yasir Nawaz</td>
+                <td>Javed Sheikh, Danish Taimoor, Janita Asma, Nayyar Ejaz, Qavi Khan, Shafqat Cheema, Sohai Ali Abro,
+                    Nadeem Jafri</td>
+                <td>Pakistan</td>
+                <td>July 1, 2017</td>
+                <td>2015</td>
+                <td>TV-14</td>
+                <td>133 min</td>
+                <td>Comedies, International Movies, Romantic Movies</td>
+                <td>Two identical strangers pursue their respective dreams after exchanging lives and getting out from
+                    under the thumb of their controlling loved ones.</td>
+            </tr>
+            <tr>
+                <th>8762</th>
+                <td>s8763</td>
+                <td>Movie</td>
+                <td>Wrong Side Raju</td>
+                <td>Mikhil Musale</td>
+                <td>Pratik Gandhi, Kimberley Louisa McBeath, Asif Basra, Kavi Shastri, Hetal Puniwala, Ragi Jani,
+                    Makarand Shukla, Alok Gagdekar, Jayesh More, Siddharth Randeria, Kenneth Desai</td>
+                <td>India</td>
+                <td>October 1, 2017</td>
+                <td>2016</td>
+                <td>TV-MA</td>
+                <td>140 min</td>
+                <td>Dramas, International Movies</td>
+                <td>The life of a chauffeur and part-time bootlegger takes a turn toward the dramatic when a girl
+                    approaches him to buy illicit alcohol.</td>
+            </tr>
+            <tr>
+                <th>8763</th>
+                <td>s8764</td>
+                <td>Movie</td>
+                <td>WWII: Report from the Aleutians</td>
+                <td>John Huston</td>
+                <td>NaN</td>
+                <td>United States</td>
+                <td>March 31, 2017</td>
+                <td>1943</td>
+                <td>TV-PG</td>
+                <td>45 min</td>
+                <td>Documentaries</td>
+                <td>Filmmaker John Huston narrates this Oscar-nominated World War II-era film about life among the U.S.
+                    soldiers protecting Alaska’s Aleutian Islands.</td>
+            </tr>
+            <tr>
+                <th>8764</th>
+                <td>s8765</td>
+                <td>Movie</td>
+                <td>Wyatt Earp</td>
+                <td>Lawrence Kasdan</td>
+                <td>Kevin Costner, Dennis Quaid, Gene Hackman, David Andrews, Linden Ashby, Jeff Fahey, Joanna Going,
+                    Mark Harmon, Michael Madsen, Catherine O'Hara, Bill Pullman, Isabella Rossellini, Tom Sizemore</td>
+                <td>United States</td>
+                <td>January 1, 2020</td>
+                <td>1994</td>
+                <td>PG-13</td>
+                <td>191 min</td>
+                <td>Action &amp; Adventure</td>
+                <td>Legendary lawman Wyatt Earp is continually at odds with a gang of renegade cowboys, culminating in a
+                    fiery showdown with the outlaws at the OK Corral.</td>
+            </tr>
+            <tr>
+                <th>8765</th>
+                <td>s8766</td>
+                <td>Movie</td>
+                <td>XX</td>
+                <td>Jovanka Vuckovic, Annie Clark, Roxanne Benjamin, Karyn Kusama</td>
+                <td>Natalie Brown, Jonathan Watton, Melanie Lynskey, Lindsay Burdge, Sheila Vand, Casey Adams, Breeda
+                    Wool, Angela Trimbur, Morgan Krantz, Christina Kirk, Kyle Allen, Mike Doyle</td>
+                <td>Canada, United States</td>
+                <td>June 22, 2017</td>
+                <td>2017</td>
+                <td>R</td>
+                <td>81 min</td>
+                <td>Horror Movies</td>
+                <td>This four-part anthology of short horror films features stories that include some traditional themes
+                    but all are shown from a female point of view.</td>
+            </tr>
+            <tr>
+                <th>8766</th>
+                <td>s8767</td>
+                <td>Movie</td>
+                <td>XXx</td>
+                <td>Rob Cohen</td>
+                <td>Vin Diesel, Asia Argento, Marton Csokas, Samuel L. Jackson, Danny Trejo, Michael Roof, Tom Everett,
+                    Richy Müller, William Hope, Werner Daehn</td>
+                <td>United States</td>
+                <td>January 1, 2019</td>
+                <td>2002</td>
+                <td>PG-13</td>
+                <td>124 min</td>
+                <td>Action &amp; Adventure, Sports Movies</td>
+                <td>A notorious underground rush-seeker deemed untouchable by the law is coerced into cooperating with
+                    the government to infiltrate a Russian crime ring.</td>
+            </tr>
+            <tr>
+                <th>8767</th>
+                <td>s8768</td>
+                <td>Movie</td>
+                <td>XXX: State of the Union</td>
+                <td>Lee Tamahori</td>
+                <td>Ice Cube, Samuel L. Jackson, Willem Dafoe, Scott Speedman, Peter Strauss, Xzibit, Michael Roof,
+                    Sunny Mabrey, Nona Gaye, John Gleeson Connolly</td>
+                <td>United States</td>
+                <td>January 1, 2019</td>
+                <td>2005</td>
+                <td>PG-13</td>
+                <td>101 min</td>
+                <td>Action &amp; Adventure</td>
+                <td>In this action-packed follow-up to XXX, U.S. intelligence officer Augustus Gibbons must thwart a
+                    massive conspiracy to overthrow the government.</td>
+            </tr>
+            <tr>
+                <th>8768</th>
+                <td>s8769</td>
+                <td>Movie</td>
+                <td>Y Tu Mamá También</td>
+                <td>Alfonso Cuarón</td>
+                <td>Maribel Verdú, Gael García Bernal, Diego Luna, Daniel Giménez Cacho, Ana López Mercado, Nathan
+                    Grinberg, Verónica Langer, María Aura, Giselle Audirac, Arturo Ríos, Andrés Almeida, Diana Bracho,
+                    Emilio Echevarría</td>
+                <td>Mexico</td>
+                <td>June 1, 2017</td>
+                <td>2001</td>
+                <td>R</td>
+                <td>106 min</td>
+                <td>Dramas, Independent Movies, International Movies</td>
+                <td>When rich teens Tenoch and Julio meet the alluring, older Luisa, they try to impress her with
+                    stories of a road trip, then convince her to join them.</td>
+            </tr>
+            <tr>
+                <th>8769</th>
+                <td>s8770</td>
+                <td>Movie</td>
+                <td>Y.M.I.: Yeh Mera India</td>
+                <td>N. Chandra</td>
+                <td>Anupam Kher, Atul Kulkarni, Aakash Pandey, Milind Gunaji, Perizaad Zorabian, Smiley Suri, Parvin
+                    Dabas, Rajit Kapoor, Purab Kohli, Rajpal Yadav, Sarika, Sayaji Shinde, Seema Biswas, Vijay Raaz,
+                    Ashwin Mushran, Veerendra Saxena, Siddhant Karnick</td>
+                <td>India</td>
+                <td>March 1, 2018</td>
+                <td>2008</td>
+                <td>TV-MA</td>
+                <td>137 min</td>
+                <td>Dramas, Independent Movies, International Movies</td>
+                <td>The lives of a middle-aged soap opera addict, an ambitious career woman, a fervent activist and nine
+                    others from different walks of Indian life intersect in Mumbai. But this vibrant melting pot
+                    threatens to bubble over with bias and bigotry.</td>
+            </tr>
+            <tr>
+                <th>8770</th>
+                <td>s8771</td>
+                <td>Movie</td>
+                <td>Yaadein</td>
+                <td>Subhash Ghai</td>
+                <td>Jackie Shroff, Hrithik Roshan, Kareena Kapoor, Amrish Puri, Kiran Rathod, Rati Agnihotri, Supriya
+                    Karnik, Anang Desai</td>
+                <td>India</td>
+                <td>March 1, 2018</td>
+                <td>2001</td>
+                <td>TV-14</td>
+                <td>171 min</td>
+                <td>Dramas, International Movies, Romantic Movies</td>
+                <td>Two young lovers set out to overcome the obstacles that stand in the way of their marriage,
+                    beginning with the objections of the girl's father.</td>
+            </tr>
+            <tr>
+                <th>8771</th>
+                <td>s8772</td>
+                <td>Movie</td>
+                <td>Yaara O Dildaara</td>
+                <td>Ksshitij Chaudhary</td>
+                <td>Harbhajan Mann, Tulip Joshi, Kabir Bedi, Gulzar Chahal, Jonita, Gurpreet Ghuggi, Gurpreet Grewal,
+                    Neena Cheema, Sunita Dhir</td>
+                <td>India</td>
+                <td>November 1, 2017</td>
+                <td>2011</td>
+                <td>TV-14</td>
+                <td>132 min</td>
+                <td>Dramas, International Movies, Music &amp; Musicals</td>
+                <td>The patriarch of a wealthy family with one industrious son and one who's a playboy arranges for the
+                    marriage of one to the woman the other loves.</td>
+            </tr>
+            <tr>
+                <th>8772</th>
+                <td>s8773</td>
+                <td>Movie</td>
+                <td>Yamla Pagla Deewana 2</td>
+                <td>Sangeeth Sivan</td>
+                <td>Dharmendra, Sunny Deol, Bobby Deol, Neha Sharma, Kristina Akheeva, Annu Kapoor, Johnny Lever,
+                    Sucheta Khanna, Aidan Cook, Anupam Kher</td>
+                <td>India</td>
+                <td>May 1, 2017</td>
+                <td>2013</td>
+                <td>TV-14</td>
+                <td>147 min</td>
+                <td>Action &amp; Adventure, Comedies, International Movies</td>
+                <td>Up to his old tricks, con man Dharam poses as a millionaire to get his younger son married to the
+                    daughter of a wealthy businessman.</td>
+            </tr>
+            <tr>
+                <th>8773</th>
+                <td>s8774</td>
+                <td>Movie</td>
+                <td>Yanda Kartavya Aahe</td>
+                <td>Kedar Shinde</td>
+                <td>Ankush Choudhary, Smita Shewale, Mohan Joshi, Atmaram Bhende, Asha Bhende</td>
+                <td>India</td>
+                <td>January 1, 2018</td>
+                <td>2006</td>
+                <td>TV-PG</td>
+                <td>151 min</td>
+                <td>Comedies, Dramas, International Movies</td>
+                <td>Thanks to an arranged marriage that was designed to make an ailing grandmother happy, newlyweds
+                    Rahul and Swati are virtually strangers. Can a four-day honeymoon make a difference when it comes to
+                    the couple's feelings about each other?</td>
+            </tr>
+            <tr>
+                <th>8774</th>
+                <td>s8775</td>
+                <td>Movie</td>
+                <td>يوم الدين</td>
+                <td>Abu Bakr Shawky</td>
+                <td>Rady Gamal, Ahmed Abdelhafiz, Shahira Fahmy, Shehab Ibrahim, Mohamed Abd El Azim, Osama Abdullah,
+                    Khaled Raafat, Mohamed Qishta, Shoq Emara, Mahmoud Fares</td>
+                <td>Egypt, Austria, United States</td>
+                <td>October 22, 2019</td>
+                <td>2018</td>
+                <td>TV-14</td>
+                <td>97 min</td>
+                <td>Dramas, Independent Movies, International Movies</td>
+                <td>A man cured of leprosy and a young orphan leave their colony for the first time to travel across
+                    Egypt, hoping to find the families they lost.</td>
+            </tr>
+            <tr>
+                <th>8775</th>
+                <td>s8776</td>
+                <td>TV Show</td>
+                <td>Yeh Meri Family</td>
+                <td>NaN</td>
+                <td>Vishesh Bansal, Mona Singh, Akarsh Khurana, Ahan Nirban, Ruhi Khan, Prasad Reddy, Revathi Pillai
+                </td>
+                <td>India</td>
+                <td>August 31, 2018</td>
+                <td>2018</td>
+                <td>TV-PG</td>
+                <td>1 Season</td>
+                <td>International TV Shows, TV Comedies</td>
+                <td>In the summer of 1998, middle child Harshu balances school, family, friendship and other challenges
+                    of growing up.</td>
+            </tr>
+            <tr>
+                <th>8776</th>
+                <td>s8777</td>
+                <td>Movie</td>
+                <td>Yellowbird</td>
+                <td>Christian De Vita</td>
+                <td>Dakota Fanning, Seth Green, Christine Baranski, Zachary Gordon, Richard Kind, Danny Glover, Elliott
+                    Gould, Ryan Lee, Jim Rash, Yvette Nicole Brown, Kostja Ullmann</td>
+                <td>France, Belgium</td>
+                <td>August 5, 2015</td>
+                <td>2014</td>
+                <td>PG</td>
+                <td>90 min</td>
+                <td>Children &amp; Family Movies, Comedies</td>
+                <td>An orphaned bird tags along with a flock on their long migration to Africa and becomes a hero when
+                    his newfound "family" runs into trouble.</td>
+            </tr>
+            <tr>
+                <th>8777</th>
+                <td>s8778</td>
+                <td>Movie</td>
+                <td>Yes or No</td>
+                <td>Saratswadee Wongsomphet</td>
+                <td>Sushar Manaying, Supanart Jittaleela, Arisara Thongborisut, Soranut Yupanun, Inthira Yeunyong</td>
+                <td>Thailand</td>
+                <td>December 6, 2018</td>
+                <td>2010</td>
+                <td>TV-PG</td>
+                <td>111 min</td>
+                <td>International Movies, LGBTQ Movies, Romantic Movies</td>
+                <td>Traditional girl Pie is initially uncomfortable with her tomboyish new roommate. But as time goes
+                    on, she finds herself increasingly attracted to her.</td>
+            </tr>
+            <tr>
+                <th>8778</th>
+                <td>s8779</td>
+                <td>Movie</td>
+                <td>Yes or No 2</td>
+                <td>Saratswadee Wongsomphet</td>
+                <td>Supanart Jittaleela, Sushar Manaying, Nisa Boonsantear, Apittha Khlaiudom, Apapattra Meesang</td>
+                <td>Thailand</td>
+                <td>November 8, 2018</td>
+                <td>2012</td>
+                <td>TV-PG</td>
+                <td>112 min</td>
+                <td>International Movies, LGBTQ Movies, Romantic Movies</td>
+                <td>No longer university girls, Kim and Pie face new hurdles in their relationship, including work, new
+                    friends and other distractions.</td>
+            </tr>
+            <tr>
+                <th>8779</th>
+                <td>s8780</td>
+                <td>Movie</td>
+                <td>Yes or No 2.5</td>
+                <td>Kirati Nakintanon</td>
+                <td>Supanart Jittaleela, Pimpakan Bangchawong, Chansakorn Kittiwattanakorn, Sunanta Yoonniyom</td>
+                <td>Thailand</td>
+                <td>November 8, 2018</td>
+                <td>2015</td>
+                <td>TV-PG</td>
+                <td>107 min</td>
+                <td>International Movies, LGBTQ Movies, Romantic Movies</td>
+                <td>Roommates Wine and Pie find their lives turned upside down when two more ladies move in next door,
+                    bringing up past heartaches and new attractions.</td>
+            </tr>
+            <tr>
+                <th>8780</th>
+                <td>s8781</td>
+                <td>TV Show</td>
+                <td>Yo-Kai Watch</td>
+                <td>NaN</td>
+                <td>Johnny Yong Bosch, J.W. Terry, Alicyn Packard, Melissa Hutchison, Pierre Holloway, Brent Pendergrass
+                </td>
+                <td>United States</td>
+                <td>April 1, 2016</td>
+                <td>2015</td>
+                <td>TV-Y7</td>
+                <td>1 Season</td>
+                <td>Anime Series, Kids' TV</td>
+                <td>Nate frees a mythical being trapped in a magic capsule, and the two new friends have adventures with
+                    all sorts of troublesome supernatural creatures.</td>
+            </tr>
+            <tr>
+                <th>8781</th>
+                <td>s8782</td>
+                <td>Movie</td>
+                <td>Yo-Kai Watch: The Movie</td>
+                <td>Mark Risley</td>
+                <td>Johnny Yong Bosch, Joey D'Auria, Alicyn Packard, Melissa Hutchison, Paul Greenberg, Brent
+                    Pendergrass</td>
+                <td>Japan, United States</td>
+                <td>December 1, 2016</td>
+                <td>2016</td>
+                <td>TV-Y7</td>
+                <td>96 min</td>
+                <td>Anime Features, Children &amp; Family Movies</td>
+                <td>Nate's special Yo-Kai Watch is missing. He travels back in time to meet the watch's inventor, his
+                    grandfather. Together, they must restore history!</td>
+            </tr>
+            <tr>
+                <th>8782</th>
+                <td>s8783</td>
+                <td>Movie</td>
+                <td>Yoga Hosers</td>
+                <td>Kevin Smith</td>
+                <td>Harley Quinn Smith, Lily-Rose Depp, Johnny Depp, Justin Long, Austin Butler, Tyler Posey, Stan Lee,
+                    Jason Mewes, Adam Brody, Haley Joel Osment, Genesis Rodriguez</td>
+                <td>United States</td>
+                <td>December 2, 2016</td>
+                <td>2016</td>
+                <td>PG-13</td>
+                <td>88 min</td>
+                <td>Comedies, Horror Movies, Independent Movies</td>
+                <td>With an all-important high school party at stake, two teen yoga fanatics enlist a man hunter to help
+                    fight an army of monsters created by Nazis.</td>
+            </tr>
+            <tr>
+                <th>8783</th>
+                <td>s8784</td>
+                <td>TV Show</td>
+                <td>Yoko</td>
+                <td>NaN</td>
+                <td>Eileen Stevens, Alyson Leigh Rosenfeld, Sarah Natochenny, H.D. Quinn</td>
+                <td>NaN</td>
+                <td>June 23, 2018</td>
+                <td>2016</td>
+                <td>TV-Y</td>
+                <td>1 Season</td>
+                <td>Kids' TV</td>
+                <td>Friends Mai, Oto and Vik's games at the park become magical adventures, thanks to Yoko, who can turn
+                    playgrounds into spaceships and camping sites.</td>
+            </tr>
+            <tr>
+                <th>8784</th>
+                <td>s8785</td>
+                <td>Movie</td>
+                <td>Yoko and His Friends</td>
+                <td>NaN</td>
+                <td>Eileen Stevens, Alyson Leigh Rosenfeld, Sarah Natochenny, H.D. Quinn</td>
+                <td>Russia, Spain</td>
+                <td>June 23, 2018</td>
+                <td>2015</td>
+                <td>TV-Y</td>
+                <td>78 min</td>
+                <td>Children &amp; Family Movies</td>
+                <td>Vik meets new friends in a new city, where they go on exciting adventures together with a magical
+                    being. But soon, his family must move again.</td>
+            </tr>
+            <tr>
+                <th>8785</th>
+                <td>s8786</td>
+                <td>TV Show</td>
+                <td>YOM</td>
+                <td>NaN</td>
+                <td>Sairaj, Devyani Dagaonkar, Ketan Singh, Mayur Vyas, Ketan Kava</td>
+                <td>NaN</td>
+                <td>June 7, 2018</td>
+                <td>2016</td>
+                <td>TV-Y7</td>
+                <td>1 Season</td>
+                <td>Kids' TV</td>
+                <td>With the mind of a human being, and the body of whichever animal he chooses to be, a young boy
+                    protects the world from danger.</td>
+            </tr>
+            <tr>
+                <th>8786</th>
+                <td>s8787</td>
+                <td>Movie</td>
+                <td>You Can Tutu</td>
+                <td>James Brown</td>
+                <td>Lily O'Regan, Jeannettsy Enriquez Borges, Joeley Gibson, Zahra Hassan Malik, Cleo Badcock, Stuart
+                    Manning, Ali Bastian, Amanda Holt</td>
+                <td>United Kingdom</td>
+                <td>December 31, 2017</td>
+                <td>2017</td>
+                <td>TV-G</td>
+                <td>87 min</td>
+                <td>Children &amp; Family Movies</td>
+                <td>A gifted young ballet dancer struggles to find her footing in an uptight ballet school that brings
+                    her and her family to a brand-new neighborhood.</td>
+            </tr>
+            <tr>
+                <th>8787</th>
+                <td>s8788</td>
+                <td>Movie</td>
+                <td>You Can’t Fight Christmas</td>
+                <td>Kenny Young</td>
+                <td>Brely Evans, Andra Fuller, Persia White, Porscha Coleman, Travis Winfrey, Nathan Davis Jr., Dedrick
+                    Bonner, Matthew Jones, Larry Poindexter, Richard Gant, Marla Gibbs</td>
+                <td>United States</td>
+                <td>December 19, 2017</td>
+                <td>2017</td>
+                <td>TV-PG</td>
+                <td>85 min</td>
+                <td>Comedies, Romantic Movies</td>
+                <td>After stepping in to revitalize his family's hotel, a money-minded businessman clashes with the
+                    hotel's cheery, Christmas-loving decorator.</td>
+            </tr>
+            <tr>
+                <th>8788</th>
+                <td>s8789</td>
+                <td>Movie</td>
+                <td>You Carry Me</td>
+                <td>Ivona Juka</td>
+                <td>Lana Baric, Vojislav Brajovic, Natasa Janjic, Goran Hajdukovic, Helena Beljan, Juraj Dabic, Natasa
+                    Dorcic, Sebastian Cavazza, Ana Begic, Krunoslav Saric</td>
+                <td>Croatia, Slovenia, Serbia, Montenegro</td>
+                <td>July 1, 2016</td>
+                <td>2015</td>
+                <td>TV-MA</td>
+                <td>157 min</td>
+                <td>Dramas, International Movies</td>
+                <td>A soap opera producer, director and makeup artist each face wrenching family turmoil, from teen
+                    rebellion and marital infidelity to Alzheimer's.</td>
+            </tr>
+            <tr>
+                <th>8789</th>
+                <td>s8790</td>
+                <td>Movie</td>
+                <td>You Changed My Life</td>
+                <td>Cathy Garcia-Molina</td>
+                <td>John Lloyd Cruz, Sarah Geronimo, Rayver Cruz, Dante Rivero, Rowell Santiago, Al Tantay, Irma
+                    Adlawan, Bernard Palanca, Matet De Leon, Joross Gamboa</td>
+                <td>Philippines</td>
+                <td>February 27, 2019</td>
+                <td>2009</td>
+                <td>TV-PG</td>
+                <td>116 min</td>
+                <td>Comedies, Dramas, International Movies</td>
+                <td>Laida and Miggy think they've found perfect happiness with each other, until their burgeoning
+                    careers force them into a long-distance relationship.</td>
+            </tr>
+            <tr>
+                <th>8790</th>
+                <td>s8791</td>
+                <td>Movie</td>
+                <td>You Don't Mess with the Zohan</td>
+                <td>Dennis Dugan</td>
+                <td>Adam Sandler, John Turturro, Emmanuelle Chriqui, Nick Swardson, Lainie Kazan, Ido Mosseri, Rob
+                    Schneider, Dave Matthews, Michael Buffer, Charlotte Rae</td>
+                <td>United States</td>
+                <td>September 1, 2019</td>
+                <td>2008</td>
+                <td>UR</td>
+                <td>113 min</td>
+                <td>Action &amp; Adventure, Comedies</td>
+                <td>An Israeli counterterrorism soldier with a secretly fabulous ambition to become a Manhattan
+                    hairstylist will do anything to make his dreams come true.</td>
+            </tr>
+            <tr>
+                <th>8791</th>
+                <td>s8792</td>
+                <td>Movie</td>
+                <td>Young Adult</td>
+                <td>Jason Reitman</td>
+                <td>Charlize Theron, Patton Oswalt, Patrick Wilson, Elizabeth Reaser, Jill Eikenberry, Mary Beth Hurt,
+                    Collette Wolfe, Richard Bekins, Kate Nowlin</td>
+                <td>United States</td>
+                <td>November 20, 2019</td>
+                <td>2011</td>
+                <td>R</td>
+                <td>94 min</td>
+                <td>Comedies, Dramas, Independent Movies</td>
+                <td>When a divorced writer gets a letter from an old boyfriend announcing his wife's had a baby, she
+                    returns to her hometown to reconnect with her ex.</td>
+            </tr>
+            <tr>
+                <th>8792</th>
+                <td>s8793</td>
+                <td>Movie</td>
+                <td>Young Tiger</td>
+                <td>Mu Chu</td>
+                <td>Qiu Yuen, Charlie Chin, Jackie Chan, Hu Chin, Nan Chiang</td>
+                <td>Hong Kong</td>
+                <td>November 1, 2016</td>
+                <td>1973</td>
+                <td>NR</td>
+                <td>81 min</td>
+                <td>Action &amp; Adventure, International Movies</td>
+                <td>Aided only by a tough female police officer, a Hong Kong taxi driver tries to escape from gangsters
+                    pursuing incriminating evidence left in his cab.</td>
+            </tr>
+            <tr>
+                <th>8793</th>
+                <td>s8794</td>
+                <td>Movie</td>
+                <td>Yours, Mine and Ours</td>
+                <td>Raja Gosnell</td>
+                <td>Dennis Quaid, Rene Russo, Sean Faris, Katija Pevec, Dean Collins, Tyler Patrick Jones, Haley Ramm,
+                    Brecken Palmer, Bridger Palmer, Ty Panitz</td>
+                <td>United States</td>
+                <td>November 20, 2019</td>
+                <td>2005</td>
+                <td>PG</td>
+                <td>88 min</td>
+                <td>Children &amp; Family Movies, Comedies</td>
+                <td>When a father of eight and a mother of 10 prepare to wed, the couple's children attempt to sabotage
+                    the union in this remake of a 1968 comedy.</td>
+            </tr>
+            <tr>
+                <th>8794</th>
+                <td>s8795</td>
+                <td>Movie</td>
+                <td>اشتباك</td>
+                <td>Mohamed Diab</td>
+                <td>Nelly Karim, Hany Adel, Tarek Abdel Aziz, Ahmed Malek, Ahmed Dash, Husni Sheta, Aly Eltayeb, Amr El
+                    Kady, Mohamed Abd El Azim, Gameel Barsoum, Ashraf Hamdy</td>
+                <td>Egypt, France</td>
+                <td>October 11, 2018</td>
+                <td>2016</td>
+                <td>TV-14</td>
+                <td>98 min</td>
+                <td>Dramas, Independent Movies, International Movies</td>
+                <td>Amid the tumult following Egyptian President Morsi's ouster, demonstrators from divergent
+                    backgrounds are brought together inside a police truck.</td>
+            </tr>
+            <tr>
+                <th>8795</th>
+                <td>s8796</td>
+                <td>TV Show</td>
+                <td>Yu-Gi-Oh! Arc-V</td>
+                <td>NaN</td>
+                <td>Mike Liscio, Emily Bauer, Billy Bob Thompson, Alyson Leigh Rosenfeld, Michael Crouch</td>
+                <td>Japan, Canada</td>
+                <td>May 1, 2018</td>
+                <td>2015</td>
+                <td>TV-Y7</td>
+                <td>2 Seasons</td>
+                <td>Anime Series, Kids' TV</td>
+                <td>Now that he's discovered the Pendulum Summoning technique, Yuya's dream of becoming the greatest
+                    "dueltainer" is in reach – but it won't be easy!</td>
+            </tr>
+            <tr>
+                <th>8796</th>
+                <td>s8797</td>
+                <td>TV Show</td>
+                <td>Yunus Emre</td>
+                <td>NaN</td>
+                <td>Gökhan Atalay, Payidar Tüfekçioglu, Baran Akbulut, Mehmet Çepiç, Seda Tosun, Mehmet Ali Tuncer,
+                    Asuman Çakır, Müge Uyar, Rüzgar Aksoy, Ergun Taş, Sedat Erdiş, Ahmet Talay, Umut Tanyolu, Murat
+                    Ercanlı, Birand Tunca, Atilla Kiliç, Saygin Asan, Emrah Girgin</td>
+                <td>Turkey</td>
+                <td>January 17, 2017</td>
+                <td>2016</td>
+                <td>TV-PG</td>
+                <td>2 Seasons</td>
+                <td>International TV Shows, TV Dramas</td>
+                <td>During the Mongol invasions, Yunus Emre leaves his home to travel across the Ottoman Empire, defying
+                    hardships and temptations to become a dervish.</td>
+            </tr>
+            <tr>
+                <th>8797</th>
+                <td>s8798</td>
+                <td>TV Show</td>
+                <td>Zak Storm</td>
+                <td>NaN</td>
+                <td>Michael Johnston, Jessica Gee-George, Christine Marie Cabanos, Christopher Smith, Max Mittelman,
+                    Reba Buhr, Kyle Hebert</td>
+                <td>United States, France, South Korea, Indonesia</td>
+                <td>September 13, 2018</td>
+                <td>2016</td>
+                <td>TV-Y7</td>
+                <td>3 Seasons</td>
+                <td>Kids' TV</td>
+                <td>Teen surfer Zak Storm is mysteriously transported to the Bermuda Triangle, where he becomes the
+                    captain of a magical ship full of misfits.</td>
+            </tr>
+            <tr>
+                <th>8798</th>
+                <td>s8799</td>
+                <td>Movie</td>
+                <td>Zed Plus</td>
+                <td>Chandra Prakash Dwivedi</td>
+                <td>Adil Hussain, Mona Singh, K.K. Raina, Sanjay Mishra, Anil Rastogi, Ravi Jhankal, Kulbhushan
+                    Kharbanda, Ekavali Khanna, Mukesh Tiwari, Vinod Acharya</td>
+                <td>India</td>
+                <td>December 31, 2019</td>
+                <td>2014</td>
+                <td>TV-MA</td>
+                <td>131 min</td>
+                <td>Comedies, Dramas, International Movies</td>
+                <td>A philandering small-town mechanic's political ambitions are sparked when the visiting prime
+                    minister mistakenly grants him special security clearance.</td>
+            </tr>
+            <tr>
+                <th>8799</th>
+                <td>s8800</td>
+                <td>Movie</td>
+                <td>Zenda</td>
+                <td>Avadhoot Gupte</td>
+                <td>Santosh Juvekar, Siddharth Chandekar, Sachit Patil, Chinmay Mandlekar, Rajesh Shringarpure, Pushkar
+                    Shrotri, Tejashree Pradhan, Neha Joshi</td>
+                <td>India</td>
+                <td>February 15, 2018</td>
+                <td>2009</td>
+                <td>TV-14</td>
+                <td>120 min</td>
+                <td>Dramas, International Movies</td>
+                <td>A change in the leadership of a political party sparks bitter conflict and the party's division into
+                    two rival factions.</td>
+            </tr>
+            <tr>
+                <th>8800</th>
+                <td>s8801</td>
+                <td>TV Show</td>
+                <td>Zindagi Gulzar Hai</td>
+                <td>NaN</td>
+                <td>Sanam Saeed, Fawad Khan, Ayesha Omer, Mehreen Raheel, Sheheryar Munawar, Samina Peerzada, Waseem
+                    Abbas, Javed Sheikh, Hina Khawaja Bayat</td>
+                <td>Pakistan</td>
+                <td>December 15, 2016</td>
+                <td>2012</td>
+                <td>TV-PG</td>
+                <td>1 Season</td>
+                <td>International TV Shows, Romantic TV Shows, TV Dramas</td>
+                <td>Strong-willed, middle-class Kashaf and carefree, wealthy Zaroon meet in college, but before love can
+                    take root, they each have some growing up to do.</td>
+            </tr>
+            <tr>
+                <th>8801</th>
+                <td>s8802</td>
+                <td>Movie</td>
+                <td>Zinzana</td>
+                <td>Majid Al Ansari</td>
+                <td>Ali Suliman, Saleh Bakri, Yasa, Ali Al-Jabri, Mansoor Alfeeli, Ahd</td>
+                <td>United Arab Emirates, Jordan</td>
+                <td>March 9, 2016</td>
+                <td>2015</td>
+                <td>TV-MA</td>
+                <td>96 min</td>
+                <td>Dramas, International Movies, Thrillers</td>
+                <td>Recovering alcoholic Talal wakes up inside a small-town police station cell, where he's subject to
+                    the mind games of a psychotic sadist.</td>
+            </tr>
+            <tr>
+                <th>8802</th>
+                <td>s8803</td>
+                <td>Movie</td>
+                <td>Zodiac</td>
+                <td>David Fincher</td>
+                <td>Mark Ruffalo, Jake Gyllenhaal, Robert Downey Jr., Anthony Edwards, Brian Cox, Elias Koteas, Donal
+                    Logue, John Carroll Lynch, Dermot Mulroney, Chloë Sevigny</td>
+                <td>United States</td>
+                <td>November 20, 2019</td>
+                <td>2007</td>
+                <td>R</td>
+                <td>158 min</td>
+                <td>Cult Movies, Dramas, Thrillers</td>
+                <td>A political cartoonist, a crime reporter and a pair of cops investigate San Francisco's infamous
+                    Zodiac Killer in this thriller based on a true story.</td>
+            </tr>
+            <tr>
+                <th>8803</th>
+                <td>s8804</td>
+                <td>TV Show</td>
+                <td>Zombie Dumb</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>July 1, 2019</td>
+                <td>2018</td>
+                <td>TV-Y7</td>
+                <td>2 Seasons</td>
+                <td>Kids' TV, Korean TV Shows, TV Comedies</td>
+                <td>While living alone in a spooky town, a young girl befriends a motley crew of zombie children with
+                    diverse personalities.</td>
+            </tr>
+            <tr>
+                <th>8804</th>
+                <td>s8805</td>
+                <td>Movie</td>
+                <td>Zombieland</td>
+                <td>Ruben Fleischer</td>
+                <td>Jesse Eisenberg, Woody Harrelson, Emma Stone, Abigail Breslin, Amber Heard, Bill Murray, Derek Graf
+                </td>
+                <td>United States</td>
+                <td>November 1, 2019</td>
+                <td>2009</td>
+                <td>R</td>
+                <td>88 min</td>
+                <td>Comedies, Horror Movies</td>
+                <td>Looking to survive in a world taken over by zombies, a dorky college student teams with an urban
+                    roughneck and a pair of grifter sisters.</td>
+            </tr>
+            <tr>
+                <th>8805</th>
+                <td>s8806</td>
+                <td>Movie</td>
+                <td>Zoom</td>
+                <td>Peter Hewitt</td>
+                <td>Tim Allen, Courteney Cox, Chevy Chase, Kate Mara, Ryan Newman, Michael Cassidy, Spencer Breslin, Rip
+                    Torn, Kevin Zegers</td>
+                <td>United States</td>
+                <td>January 11, 2020</td>
+                <td>2006</td>
+                <td>PG</td>
+                <td>88 min</td>
+                <td>Children &amp; Family Movies, Comedies</td>
+                <td>Dragged from civilian life, a former superhero must train a new crop of youthful saviors when the
+                    military preps for an attack by a familiar villain.</td>
+            </tr>
+            <tr>
+                <th>8806</th>
+                <td>s8807</td>
+                <td>Movie</td>
+                <td>Zubaan</td>
+                <td>Mozez Singh</td>
+                <td>Vicky Kaushal, Sarah-Jane Dias, Raaghav Chanana, Manish Chaudhary, Meghna Malik, Malkeet Rauni,
+                    Anita Shabdish, Chittaranjan Tripathy</td>
+                <td>India</td>
+                <td>March 2, 2019</td>
+                <td>2015</td>
+                <td>TV-14</td>
+                <td>111 min</td>
+                <td>Dramas, International Movies, Music &amp; Musicals</td>
+                <td>A scrappy but poor boy worms his way into a tycoon's dysfunctional family, while facing his fear of
+                    music and the truth about his past.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.0.0-rc.3.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<!-- Leaflet JavaScript -->
+<!-- API key -->
+<script type="text/javascript" src="../static/js/config.js"></script>
+<script src="../static/js/app.js"></script>
+
+{% endblock %}
