@@ -8,7 +8,7 @@ Questions we want to answer:
 2.	What is the most targeted audience?
 3.	Are movies watched more than tv shows?
 4.	In what countries movies/shows are mainly produced?
-5.	What is the number of tv shows and movies produced through the years?
+5.	How does the number of released movies compare to number of released tv shows through the years?
 
 The flask application runs on: https://
 Below are screenshots of what the app looks like when running:
