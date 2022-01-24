@@ -1,5 +1,5 @@
-#--2020-2021 Netflix Movies and TV Shows dataset--
-##Overview
+# --2020-2021 Netflix Movies and TV Shows dataset--
+## Overview
 
 We have created a dashboard using Flask to analyze the correlation between the use of Netflix and its audience to better understand and personalize content based on key factors such as age and type of show. 
 
@@ -13,7 +13,7 @@ Questions we want to answer:
 The flask application runs on: https://
 Below are screenshots of what the app looks like when running:
 
-###Index Page
+### Index Page
 ...
 ...
 ...
