@@ -103,7 +103,7 @@
 
 
 .navbar .nav-item2 {
-    width: 100px;
+    width: 150px;
     text-align: right;
     padding-top: 10px;
     
@@ -140,7 +140,14 @@
     width: 125px;
     padding-right: 0px;
 } 
-/* */ */
+
+#maptitle{
+    margin-top: 15px;
+    text-align:center;
+    font-weight:bold;
+    height: 500px;
+    font-size:18px;
+}
 
 /* .navbar .nav-item .nav-link {
     padding-left: 0px;
@@ -261,4 +268,4 @@
 .container .title .content form .email button a{
     text-decoration: none;
     color: white;
-} */
+/* 

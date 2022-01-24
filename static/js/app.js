@@ -1,51 +1,90 @@
-// var eyeColor = ["Brown", "Brown", "Brown", "Brown", "Brown",
-//   "Brown", "Brown", "Brown", "Green", "Green",
-//   "Green", "Green", "Green", "Blue", "Blue",
-//   "Blue", "Blue", "Blue", "Blue"];
-// var eyeFlicker = [26.8, 27.9, 23.7, 25, 26.3, 24.8,
-//   25.7, 24.5, 26.4, 24.2, 28, 26.9,
-//   29.1, 25.7, 27.2, 29.9, 28.5, 29.4, 28.3];
 
-// // Create the Trace
-// var trace1 = {
-//   x: eyeColor,
-//   y: eyeFlicker,
-//   type: "bar"
-// };
-
-// // Create the data array for the plot
-// var data = [trace1];
-
-// // Define the plot layout
-// var layout = {
-//   title: "Eye Color vs Flicker",
-//   xaxis: { title: "Eye Color" },
-//   yaxis: { title: "Flicker Frequency" }
-// };
-
-// // Plot the chart to a div tag with id "bar-plot"
-// Plotly.newPlot("moviesVsTV", data, layout);
 
 function renderDirector(year, type) {
   d3.json(`/director/${year}/${type}`).then(data2 => {
+    // var trace1 = {
+    //   y: data2.map(row => row.director),
+    //   x: data2.map(row => row.title).reverse(),
+    //   text: data2.map(row => row.title).reverse().map(String),
+    //   textposition: 'auto',
+    //   type: "bar",
+    //   orientation: "h",
+    //   hoverinfo: 'none'
+
+    // };
+    // Create the Trace
     var trace1 = {
-      y: data2.map(row => row.director),
-      x: data2.map(row => row.title).reverse(),
+      // y: tvshowdata.map(row => row.rating),
+      y: data2.filter(thing => thing.type = "TV Show").map(row => row.director),
+      // x: tvshowdata.map(row => row.title).reverse(),
+      x: data2.filter(thing => thing.type = "TV Show").map(row => row.title).reverse(),
+      text: data2.filter(thing => thing.type = "TV Show").map(row => row.title).reverse().map(String),
+      textposition: 'inside',
       type: "bar",
-      orientation: "h"
+      orientation: "h",
+      name: "TV Show",
+      marker: {
+        color: '#333333',
+        line: {
+          width: 1
+        }
+      },
+
 
     };
-    // Create the Trace
+    var trace2 = {
+      // y: moviedata.map(row => row.rating),
+      // x: moviedata.map(row => row.title).reverse(),
+      y: data2.filter(thing => thing.type = "Movie").map(row => row.director),
+      x: data2.filter(thing => thing.type = "Movie").map(row => row.title).reverse(),
+      text: data2.filter(thing => thing.type = "Movie").map(row => row.title).reverse().map(String),
+      textposition: 'inside',
+      type: "bar",
+      orientation: "h",
+      name: "Movie",
+      marker: {
+        color: 'red',
+        line: {
+          width: 1
+        }
+      }
 
+    };
 
     // Create the data array for the plot
-    var data = [trace1];
+    var data = [trace1, trace2];
 
     // Define the plot layout
     var layout = {
-      title: "Eye Color vs Flicker",
-      xaxis: { title: "Eye Color" },
-      yaxis: { title: "Flicker Frequency" }
+      // title: "# Titles By Director",
+      title: {
+        text: '<b># Titles By Director</b>',
+        font: {
+          family: "arial",
+          color: "#212529",
+          size: 16
+        }
+
+        // font: {
+        //   family: 'Courier New, monospace',
+        //   size: 24
+        // },
+
+        // y: "1",
+        // yanchor: "top"
+      }, barmode: "stack",
+      showlegend: false,
+      // xaxis: { title: "Eye Color" },
+      // yaxis: { title: "Flicker Frequency" }
+      height: 350,
+      margin: {
+        l: 20,
+        r: 20,
+        b: 50,
+        t: 50,
+        pad: 0
+      },
+      yaxis: { ticksuffix: "     ", automargin: true }
     };
 
     // Plot the chart to a div tag with id "bar-plot"
@@ -63,10 +102,18 @@ function renderRating(year, type) {
       y: data2.filter(thing => thing.type = "TV Show").map(row => row.rating),
       // x: tvshowdata.map(row => row.title).reverse(),
       x: data2.filter(thing => thing.type = "TV Show").map(row => row.title).reverse(),
-
+      text: data2.filter(thing => thing.type = "TV Show").map(row => row.title).reverse().map(String),
+      textposition: 'inside',
       type: "bar",
       orientation: "h",
-      name: "TV Show"
+      name: "TV Show",
+      marker: {
+        color: '#333333',
+        line: {
+          width: 1
+        }
+      },
+
 
     };
     var trace2 = {
@@ -74,9 +121,17 @@ function renderRating(year, type) {
       // x: moviedata.map(row => row.title).reverse(),
       y: data2.filter(thing => thing.type = "Movie").map(row => row.rating),
       x: data2.filter(thing => thing.type = "Movie").map(row => row.title).reverse(),
+      text: data2.filter(thing => thing.type = "Movie").map(row => row.title).reverse().map(String),
+      textposition: 'inside',
       type: "bar",
       orientation: "h",
-      name: "Movie"
+      name: "Movie",
+      marker: {
+        color: 'red',
+        line: {
+          width: 1
+        }
+      }
 
     };
     // Create the Trace
@@ -87,10 +142,34 @@ function renderRating(year, type) {
 
     // Define the plot layout
     var layout = {
-      title: "Eye Color vs Flicker",
-      xaxis: { title: "Eye Color" },
-      yaxis: { title: "Flicker Frequency" },
-      barmode: 'stack'
+      title: {
+        text: '<b># Titles By Rating</b>',
+        font: {
+          family: "arial",
+          color: "#212529",
+          size: 16
+        }
+
+        // font: {
+        //   family: 'Courier New, monospace',
+        //   size: 24
+        // },
+
+        // y: "1",
+        // yanchor: "top"
+      },
+      // xaxis: { title: "Eye Color" },
+      showlegend: false,
+
+      barmode: 'stack', height: 350,
+      margin: {
+        l: 20,
+        r: 20,
+        b: 50,
+        t: 50,
+        pad: 0
+      },
+      yaxis: { ticksuffix: "     ", automargin: true }
     };
 
     // Plot the chart to a div tag with id "bar-plot"
@@ -98,31 +177,16 @@ function renderRating(year, type) {
   })
 };
 
-//     /*    ========Build a Pie Chart======== */
-//     var data = [{
-//       values: sample_values.slice(0, 10),
-//       labels: otu_ids.slice(0, 10),
-//       hovertext: otu_labels.slice(0, 10),
-//       "type": "pie"
-//     }]
 
-//     var layout = {
-//       title: "Top 10 bacterial species",
-//       showlegend: true,
-//       hoverdistance: 10,
-//       colorway: colorlist
-//     };
-
-//     Plotly.newPlot("moviesVsTV", data, layout, { responsive: true });
-//     console.log("hi");
-/*  ==============END PIE ============== */
 function renderType(year, type) {
   d3.json(`/type/${year}/${type}`).then(data2 => {
     var trace1 = {
       values: data2.map(row => row.title),
       labels: data2.map(row => row.type),
-      type: "pie"
-
+      type: "pie",
+      marker: {
+        colors: ["red", "#333333"]
+      }
     };
     // Create the Trace
 
@@ -132,9 +196,34 @@ function renderType(year, type) {
 
     // Define the plot layout
     var layout = {
-      title: "Top 10 bacterial species",
+      title: {
+        text: '<b># Movies Vs # TV Shows</b>',
+        font: {
+          family: "arial",
+          color: "#212529",
+          size: 16
+        }
 
-      showlegend: true
+        // font: {
+        //   family: 'Courier New, monospace',
+        //   size: 24
+        // },
+
+        // y: "1",
+        // yanchor: "top"
+      }
+      ,
+
+      showlegend: true, height: 350,
+      margin: {
+        l: 20,
+        r: 20,
+        b: 50,
+        t: 50,
+        pad: 0
+      },
+      yaxis: { ticksuffix: "     ", automargin: true }
+
 
     };
 
@@ -146,23 +235,84 @@ function renderType(year, type) {
 
 function renderYear(year, type) {
   d3.json(`/year/${year}/${type}`).then(data2 => {
+    // var trace1 = {
+    //   x: data2.map(row => row.release_year),
+    //   y: data2.map(row => row.title),
+    //   type: "bar"
+
+    // };
+    // Create the Trace
     var trace1 = {
-      x: data2.map(row => row.release_year),
-      y: data2.map(row => row.title),
-      type: "bar"
+      // y: tvshowdata.map(row => row.rating),
+      x: data2.filter(thing => thing.type = "TV Show").map(row => row.release_year),
+      // x: tvshowdata.map(row => row.title).reverse(),
+      y: data2.filter(thing => thing.type = "TV Show").map(row => row.title),
+      text: data2.filter(thing => thing.type = "TV Show").map(row => row.title).map(String),
+      textposition: 'inside',
+      type: "bar",
+      name: "TV Show",
+      marker: {
+        color: '#333333',
+        line: {
+          width: 1
+        }
+      },
+
 
     };
-    // Create the Trace
+    var trace2 = {
+      // y: moviedata.map(row => row.rating),
+      // x: moviedata.map(row => row.title).reverse(),
+      x: data2.filter(thing => thing.type = "Movie").map(row => row.release_year),
+      y: data2.filter(thing => thing.type = "Movie").map(row => row.title),
+      text: data2.filter(thing => thing.type = "Movie").map(row => row.title).map(String),
+      textposition: 'inside',
+      type: "bar",
+      name: "Movie",
+      marker: {
+        color: 'red',
+        line: {
+          width: 1
+        }
+      }
 
+    };
 
     // Create the data array for the plot
-    var data = [trace1];
+    var data = [trace1, trace2];
 
     // Define the plot layout
     var layout = {
-      title: "Eye Color vs Flicker",
-      xaxis: { title: "Eye Color" },
-      yaxis: { title: "Flicker Frequency" }
+      title: {
+        text: '<b># Titles By Release Year</b>',
+        font: {
+          family: "arial",
+          color: "#212529",
+          size: 16
+        }
+
+        // font: {
+        //   family: 'Courier New, monospace',
+        //   size: 24
+        // },
+
+        // y: "1",
+        // yanchor: "top"
+      }, showlegend: false,
+      barmode: "stack",
+      xaxis: { title: "Release Year" }, height: 350,
+      margin: {
+        l: 20,
+        r: 20,
+        b: 50,
+        t: 50,
+        pad: 0
+      },
+      yaxis: { ticksuffix: "     ", automargin: true }
+
+
+
+      // yaxis: { title: "Flicker Frequency" }
     };
 
     // Plot the chart to a div tag with id "bar-plot"
@@ -222,7 +372,7 @@ function renderMap(year, type) {
     };
 
     var overlayMaps = {
-      "Earthquakes": earthquakes
+      "Netflix Content": earthquakes
 
     };
     // Create the map, giving it the darkmap and earthquakes layers to display on load
@@ -247,13 +397,13 @@ function renderMap(year, type) {
 
     // Determine the marker size by magnitude
     function markerSize(magnitude) {
-      return magnitude / 100;
+      return (magnitude / 120) + 2;
     };
     // Determine the marker color by depth
     function chooseColor(value) {
       switch (true) {
-        case value > 9:
-          return "#D90000";
+        case value > 1:
+          return "white";
         case value > 7:
           return "#ff2828";
         case value > 5:
@@ -276,15 +426,15 @@ function renderMap(year, type) {
           {
             radius: markerSize(feature.properties.title),
             fillColor: chooseColor(feature.properties.title),
-            fillOpacity: 0.9,
-            color: "white",
+            fillOpacity: 1,
+            color: "black",
             stroke: true,
             weight: 0.3
           }
         );
       },
       onEachFeature: function (feature, layer) {
-        layer.bindPopup("<h4> " + feature.properties.country + "</h4><hr><p># of content: " + feature.properties.title + "</p>");
+        layer.bindPopup("<b> " + feature.properties.country + "</b><hr><p># of content: " + feature.properties.title + "</p>");
       }
     }).addTo(earthquakes);
     // Sending our earthquakes layer to the createMap function
