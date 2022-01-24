@@ -47,10 +47,10 @@ flask run
   
 ## Deploying to Heroku
 1. Freeze pip / conda requirements
-  python -m pip list --format=freeze > requirements.txt
+ python -m pip list --format=freeze > requirements.txt
   
 2. Create/Update Procfile to use gunicorn to run the web server and set app.py as the application to run:
-  web: gunicorn app:app
+ web: gunicorn app:app
   
 3. Create/Update runtime.txt to contain:
-  python-3.7.10
+ python-3.7.10
