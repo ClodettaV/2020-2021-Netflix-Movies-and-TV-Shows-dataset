@@ -16,12 +16,12 @@ Below are screenshots of what the app looks like when running:
 ### Index Page
 ![image (1)](https://user-images.githubusercontent.com/88614132/150798482-ec6c3fcd-c7f6-471c-9b47-202eb68e856f.png)
 
-Plotly JS was used to render the data onto the page by querying the API endpoints created.
+Plotly JS and Leaflet were used to render the data onto the page by querying the API endpoints created.
 
 ### Data page
 ![image (2)](https://user-images.githubusercontent.com/88614132/150798718-8bf90e34-dc7e-4a61-9118-80a7018de81c.png)
 
-This page was created by rendering markdown using Python Markdown.
+
 
 
 
