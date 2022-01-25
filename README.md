@@ -4,9 +4,9 @@
 We have created a dashboard using Flask in order to analyze the correlation between the use of Netflix and its audience. The goal is to better understand and personalize content based on key factors such as age and type of show. 
 
 Questions we want to answer:
-1.  What are the most popular directors on Netflix?
-2.	What is the most targeted audience?
-3.	Are movies watched more than tv shows?
+1.  Which directors have the most content available on Netflix?
+2.	Which target audience has the content available on Netflix?
+3.	Are there more movies available than tv shows on Netflix?
 4.	In what countries movies/shows are mainly produced?
 5.	How does the number of released movies compare to number of released tv shows through the years?
 
@@ -46,11 +46,13 @@ flask run
   
 ## Deploying to Heroku
 1. Freeze pip / conda requirements
- python -m pip list --format=freeze > requirements.txt
-  
+ ```
+  python -m pip list --format=freeze > requirements.txt
+ ```
 2. Create/Update Procfile to use gunicorn to run the web server and set app.py as the application to run:
- web: gunicorn app:app
-  
+ ```
+  web: gunicorn app:app
+ ```
 3. Create/Update runtime.txt to contain:
  ```
   python-3.7.10
