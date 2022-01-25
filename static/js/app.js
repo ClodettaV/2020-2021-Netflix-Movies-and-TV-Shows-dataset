@@ -359,6 +359,7 @@ var myMap = null;
 
 
 
+
 d3.select(window).on("load", () => {
   var year = d3.select("#yearSelector").node().value
   var type = d3.select("#metricSelector").node().value
