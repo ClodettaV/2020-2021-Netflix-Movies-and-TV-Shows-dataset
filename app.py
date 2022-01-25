@@ -1,6 +1,6 @@
 from flask import Flask, session, request, redirect, render_template, Blueprint, jsonify
-from flask_restx import Api, Resource, fields
-from flask_restful import Api, Resource, fields
+# from flask_restx import Api, Resource, fields
+# from flask_restful import Api, Resource, fields
 import pandas as pd
 import numpy as np
 
@@ -11,7 +11,7 @@ from os.path import isfile, join
 import json
 from geojson import Feature, FeatureCollection, Point
 
-import pickle
+# import pickle
 import markdown as md
 
 import sqlalchemy
