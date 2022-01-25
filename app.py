@@ -26,8 +26,7 @@ from convert2geojson import Convert2GeoJson
 # flask app setup
 app = Flask(__name__)
 
-# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///Netflix_moviesandTvshows.sqlite"
-# db = SQLAlchemy(app)
+
 
 # reflect an existing database into a new model
 Base = automap_base()
