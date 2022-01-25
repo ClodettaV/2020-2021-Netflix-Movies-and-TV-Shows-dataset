@@ -10,7 +10,7 @@ Questions we want to answer:
 4.	In what countries movies/shows are mainly produced?
 5.	How does the number of released movies compare to number of released tv shows through the years?
 
-The flask application runs on: https://
+The flask application runs on: [heroku](https://netflix-project-2022.herokuapp.com/)
 Below are screenshots of what the app looks like when running:
 
 ### Index Page
