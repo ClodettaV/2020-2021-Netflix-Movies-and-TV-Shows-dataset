@@ -52,4 +52,6 @@ flask run
  web: gunicorn app:app
   
 3. Create/Update runtime.txt to contain:
- python-3.7.10
+ ```
+  python-3.7.10
+ ```
