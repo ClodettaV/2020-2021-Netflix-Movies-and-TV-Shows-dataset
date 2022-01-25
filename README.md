@@ -29,18 +29,22 @@ Plotly JS and Leaflet were used to render the data onto the page by querying the
 ## Running locally
 
 1. Freeze pip / conda requirements
-python -m pip list --format=freeze > requirements.txt
-
+ ```
+  python -m pip list --format=freeze > requirements.txt
+ ```
 2. Create the environment using
-conda create -n <env> --file requirements.txt
-
+ ```
+ conda create -n <env> --file requirements.txt
+ ```
 3.Run the app using:
-python app.py
+ ```
+  python app.py
+ ```
 
 OR
-
-flask run
-  
+ ```
+  flask run
+ ```  
   
   
   
